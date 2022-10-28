@@ -1,7 +1,6 @@
-import React from 'react';
-// { Component }
+import React, { Component } from 'react';
 
-export class Feedback extends React.Component {
+export class Feedback extends Component {
   //   static defaultProps = {
   //     good: 0,
   //     neutral: 0,
@@ -15,7 +14,7 @@ export class Feedback extends React.Component {
 
   onBtnClock = btnName => {
     this.setState(prevState => ({
-        [btnName]: prevState[btnName] + 1,
+      [btnName]: prevState[btnName] + 1,
     }));
   };
 
