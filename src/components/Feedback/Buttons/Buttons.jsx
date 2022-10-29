@@ -27,7 +27,7 @@ const ButtonList = ({onBtnClock}) => {
         >
             Bad
         </button>
-    <h2>Statistics</h2><div></div></>
+    </>
    )}
 
    export default ButtonList;

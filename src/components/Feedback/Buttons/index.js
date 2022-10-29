@@ -1,1 +1,1 @@
-// export default {Buttons} from './Buttons'
+export { default } from './Buttons';

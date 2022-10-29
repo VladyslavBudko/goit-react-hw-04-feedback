@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-import ButtonList from './Buttons/Buttons';
-import InfoFeedback from './InfoFeedback/InfoFeedback'
+import ButtonList from './Buttons';
+import Statistics from './Statistics'
 
 export class Feedback extends Component {
   //   static defaultProps = {
@@ -27,13 +27,7 @@ export class Feedback extends Component {
       <>
         <h1>Please leave feedback</h1>
         <ButtonList onBtnClock={this.onBtnClock} />
-        <InfoFeedback state={this.state}/>
-        {/* <h2>Statistics</h2> */}
-        {/* <div>
-          <p>Good:{this.state.good}</p>
-          <p>Neutral:{this.state.neutral}</p>
-          <p>Bad:{this.state.bad}</p>
-        </div> */}
+        <Statistics state={this.state}/>
       </>
     );
   }
