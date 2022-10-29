@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+
+import ButtonList from './Buttons/Buttons';
 
 export class Feedback extends Component {
   //   static defaultProps = {
@@ -22,7 +25,8 @@ export class Feedback extends Component {
     return (
       <>
         <h1>Please leave feedback</h1>
-        <div>
+        <ButtonList onBtnClock={this.onBtnClock} />
+        {/* <div>
           <button
             type="button"
             onClick={() => {
@@ -47,7 +51,7 @@ export class Feedback extends Component {
           >
             Bad
           </button>
-        </div>
+        </div> */}
         <h2>Statistics</h2>
         <div>
           <p>Good:{this.state.good}</p>
