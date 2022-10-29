@@ -1,4 +1,5 @@
 import React from 'react';
+import Notification from '../Notification/Notification';
 
 // { good, bad, neutral }
 const Statistics = ({ state }) => {
@@ -7,7 +8,9 @@ const Statistics = ({ state }) => {
     (state.good / countTotalFeedback) * 100
   );
 
-  const StatisticsList = (
+  return !countTotalFeedback ? (
+    <Notification message="There is no feedback" />
+  ) : (
     <>
       <div>
         <p>Good:{state.good}</p>
@@ -18,12 +21,6 @@ const Statistics = ({ state }) => {
       </div>
     </>
   );
-
-  // <Notification message="There is no feedback">
-  //   countTotalFeedback ? : return message
-  // </Notification>
-
-  return StatisticsList;
 };
 
 export default Statistics;
