@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
 import ButtonList from './Buttons/Buttons';
+import InfoFeedback from './InfoFeedback/InfoFeedback'
 
 export class Feedback extends Component {
   //   static defaultProps = {
@@ -26,38 +27,13 @@ export class Feedback extends Component {
       <>
         <h1>Please leave feedback</h1>
         <ButtonList onBtnClock={this.onBtnClock} />
+        <InfoFeedback state={this.state}/>
+        {/* <h2>Statistics</h2> */}
         {/* <div>
-          <button
-            type="button"
-            onClick={() => {
-              this.onBtnClock('good');
-            }}
-          >
-            Good
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              this.onBtnClock('neutral');
-            }}
-          >
-            Neutral
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              this.onBtnClock('bad');
-            }}
-          >
-            Bad
-          </button>
-        </div> */}
-        <h2>Statistics</h2>
-        <div>
           <p>Good:{this.state.good}</p>
           <p>Neutral:{this.state.neutral}</p>
           <p>Bad:{this.state.bad}</p>
-        </div>
+        </div> */}
       </>
     );
   }
