@@ -1,12 +1,12 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 
-const ButtonList = ({onBtnClock}) => {
+const ButtonList = ({onBtnClick}) => {
     return (<>
         <button
             type="button"
             onClick={() => {
-                onBtnClock('good');
+                onBtnClick('good');
             } }
         >
             Good
@@ -14,7 +14,7 @@ const ButtonList = ({onBtnClock}) => {
         <button
             type="button"
             onClick={() => {
-                onBtnClock('neutral');
+                onBtnClick('neutral');
             } }
         >
             Neutral
@@ -22,7 +22,7 @@ const ButtonList = ({onBtnClock}) => {
         <button
             type="button"
             onClick={() => {
-                onBtnClock('bad');
+                onBtnClick('bad');
             } }
         >
             Bad

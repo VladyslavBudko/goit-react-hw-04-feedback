@@ -7,9 +7,8 @@ const Statistics = ({ state }) => {
     (state.good / countTotalFeedback) * 100
   );
 
-  return (
+  const StatisticsList = (
     <>
-      <h2>Statistics</h2>
       <div>
         <p>Good:{state.good}</p>
         <p>Neutral:{state.neutral}</p>
@@ -19,6 +18,12 @@ const Statistics = ({ state }) => {
       </div>
     </>
   );
+
+  // <Notification message="There is no feedback">
+  //   countTotalFeedback ? : return message
+  // </Notification>
+
+  return StatisticsList;
 };
 
 export default Statistics;

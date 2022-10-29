@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
 import ButtonList from './Buttons';
-import Statistics from './Statistics'
+import Statistics from './Statistics';
+import Section from './Section';
 
 export class Feedback extends Component {
   //   static defaultProps = {
@@ -16,7 +17,7 @@ export class Feedback extends Component {
     bad: 0,
   };
 
-  onBtnClock = btnName => {
+  onBtnClick = btnName => {
     this.setState(prevState => ({
       [btnName]: prevState[btnName] + 1,
     }));
@@ -25,9 +26,12 @@ export class Feedback extends Component {
   render() {
     return (
       <>
-        <h1>Please leave feedback</h1>
-        <ButtonList onBtnClock={this.onBtnClock} />
-        <Statistics state={this.state}/>
+        <Section title="Please leave feedback">
+          <ButtonList onBtnClick={this.onBtnClick} />
+        </Section>
+        <Section title="Statistics">
+          <Statistics state={this.state} />
+        </Section>
       </>
     );
   }
