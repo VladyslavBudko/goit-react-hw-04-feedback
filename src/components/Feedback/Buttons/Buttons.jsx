@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Buttons } from './Buttons.styled';
 
@@ -26,3 +26,8 @@ const ButtonList = ({ selected, onBtnClick }) => {
 };
 
 export default ButtonList;
+
+ButtonList.propTypes = {
+  selected: PropTypes.string,
+  onBtnClick: PropTypes.func,
+};
