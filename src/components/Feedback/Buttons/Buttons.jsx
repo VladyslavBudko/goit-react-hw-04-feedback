@@ -9,11 +9,9 @@ const ButtonList = ({ selected, onBtnClick }) => {
   return (
     <>
       {buttons.map(button => (
-        // console.log(button.toLowerCase);
         <Buttons
         key = {button}
           type="button"
-          selected={selected === button.toLowerCase()}
           onClick={() => {
             onBtnClick(button.toLowerCase());
           }}
